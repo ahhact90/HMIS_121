@@ -28,19 +28,43 @@ namespace HMIS_121
                 txtMedia.Text.ToString();
                 long Media = long.Parse(txtMedia.Text);
                 string text = Fee_Media.Close_Media_Fee(Media);
-                MessageBox.Show(text);
+                //MessageBox.Show(text);
                 if (text =="OK")
                 {
-                    DialogResult dialogResult = MessageBox.Show("Thông Báo", "Thành công", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show("Bạn đã đóng Bệnh án thành công", "Thông Báo", MessageBoxButtons.YesNo);
                 }
                 else
                 {
-                    DialogResult dialogResult = MessageBox.Show("Lỗi", "Lỗi", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show(text, "Lỗi", MessageBoxButtons.YesNo);
                 }
             }
             catch (Exception)
             {
                 
+                throw;
+            }
+        }
+
+        private void btnOpen_Media_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                txtMedia.Text.Trim();
+                txtMedia.Text.ToString();
+                long Media = long.Parse(txtMedia.Text);
+                string text = Fee_Media.Open_Media_Fee(Media);               
+                if (text == "OK")
+                {
+                    DialogResult dialogResult = MessageBox.Show("Bạn đã mở Bệnh án thành công", "Thông Báo", MessageBoxButtons.YesNo);
+                }
+                else
+                {
+                    DialogResult dialogResult = MessageBox.Show(text, "Thông Báo", MessageBoxButtons.YesNo);
+                }
+            }
+            catch (Exception)
+            {
+
                 throw;
             }
         }

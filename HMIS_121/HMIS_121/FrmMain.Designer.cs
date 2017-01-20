@@ -59,6 +59,7 @@
             this.btnOpen_Media.TabIndex = 2;
             this.btnOpen_Media.Text = "Mở BA Thanh toán muộn";
             this.btnOpen_Media.UseVisualStyleBackColor = true;
+            this.btnOpen_Media.Click += new System.EventHandler(this.btnOpen_Media_Click);
             // 
             // label1
             // 
