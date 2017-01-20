@@ -66,11 +66,11 @@ namespace DAL
         }
         #endregion
         #region FPub_Fee
-        public string Close_Media_Fee(long Media)
+        public Int32 Close_Media_Fee(long Media)
         {
             var sql = "select * from his_fee_close_med('{0}|1|')";
             sql = string.Format(sql,Media);
-            return sql;           
+            return ExecuteNonQuery(sql);           
         }
         
         #endregion       
