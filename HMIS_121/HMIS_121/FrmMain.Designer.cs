@@ -28,36 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtMedia = new System.Windows.Forms.TextBox();
+            this.btnClose_Media = new System.Windows.Forms.Button();
+            this.btnOpen_Media = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtMedia
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtMedia.Location = new System.Drawing.Point(92, 39);
+            this.txtMedia.Name = "txtMedia";
+            this.txtMedia.Size = new System.Drawing.Size(154, 20);
+            this.txtMedia.TabIndex = 0;
             // 
-            // button1
+            // btnClose_Media
             // 
-            this.button1.Location = new System.Drawing.Point(279, 31);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 34);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Đóng BA Thanh toán muộn";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnClose_Media.Location = new System.Drawing.Point(279, 31);
+            this.btnClose_Media.Name = "btnClose_Media";
+            this.btnClose_Media.Size = new System.Drawing.Size(145, 34);
+            this.btnClose_Media.TabIndex = 1;
+            this.btnClose_Media.Text = "Đóng BA Thanh toán muộn";
+            this.btnClose_Media.UseVisualStyleBackColor = true;
+            this.btnClose_Media.Click += new System.EventHandler(this.btnClose_Media_Click);
             // 
-            // button2
+            // btnOpen_Media
             // 
-            this.button2.Location = new System.Drawing.Point(471, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 36);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Mở BA Thanh toán muộn";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnOpen_Media.Location = new System.Drawing.Point(471, 28);
+            this.btnOpen_Media.Name = "btnOpen_Media";
+            this.btnOpen_Media.Size = new System.Drawing.Size(144, 36);
+            this.btnOpen_Media.TabIndex = 2;
+            this.btnOpen_Media.Text = "Mở BA Thanh toán muộn";
+            this.btnOpen_Media.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -74,9 +75,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(751, 261);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnOpen_Media);
+            this.Controls.Add(this.btnClose_Media);
+            this.Controls.Add(this.txtMedia);
             this.Name = "FrmMain";
             this.Text = "Viện phí 121";
             this.ResumeLayout(false);
@@ -86,9 +87,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtMedia;
+        private System.Windows.Forms.Button btnClose_Media;
+        private System.Windows.Forms.Button btnOpen_Media;
         private System.Windows.Forms.Label label1;
     }
 }
