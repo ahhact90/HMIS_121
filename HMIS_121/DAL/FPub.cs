@@ -138,67 +138,67 @@ namespace DAL
         //    }
         //    goto Label_002B;
         //}
-        /// <summary>
-        /// Ham ma hoa du lieu
-        /// </summary>
-        /// <param name="toEncrypt"></param>
-        /// <param name="key"></param>
-        /// <param name="useHashing"></param>
-        /// <returns></returns>
-        public string Encrypt(string toEncrypt, string key, bool useHashing)
-        {
-            byte[] bytes;
-            byte[] buffer2;
-            string str;
-        Label_002B:
-            buffer2 = Encoding.UTF8.GetBytes(toEncrypt);
-            bool flag = !useHashing;
-            int num = 3;
-        Label_0010:
-            switch (num)
-            {
-                case 0:
-                    bytes = new MD5CryptoServiceProvider().ComputeHash(Encoding.UTF8.GetBytes(key));
-                    num = 1;
-                    goto Label_0010;
+        ///// <summary>
+        ///// Ham ma hoa du lieu
+        ///// </summary>
+        ///// <param name="toEncrypt"></param>
+        ///// <param name="key"></param>
+        ///// <param name="useHashing"></param>
+        ///// <returns></returns>
+        //public string Encrypt(string toEncrypt, string key, bool useHashing)
+        //{
+        //    byte[] bytes;
+        //    byte[] buffer2;
+        //    string str;
+        //Label_002B:
+        //    buffer2 = Encoding.UTF8.GetBytes(toEncrypt);
+        //    bool flag = !useHashing;
+        //    int num = 3;
+        //Label_0010:
+        //    switch (num)
+        //    {
+        //        case 0:
+        //            bytes = new MD5CryptoServiceProvider().ComputeHash(Encoding.UTF8.GetBytes(key));
+        //            num = 1;
+        //            goto Label_0010;
 
-                case 1:
-                case 4:
-                    {
-                        TripleDESCryptoServiceProvider provider2 = new TripleDESCryptoServiceProvider ()
-                        {
-                            Key = bytes,
-                            Mode = CipherMode.ECB,
-                            Padding = PaddingMode.PKCS7
-                        };
-                        byte[] inArray = provider2.CreateEncryptor().TransformFinalBlock(buffer2, 0, buffer2.Length);
-                        str = Convert.ToBase64String(inArray, 0, inArray.Length);
-                        num = 2;
-                        goto Label_0010;
-                    }
-                case 2:
-                    return str;
+        //        case 1:
+        //        case 4:
+        //            {
+        //                TripleDESCryptoServiceProvider provider2 = new TripleDESCryptoServiceProvider ()
+        //                {
+        //                    Key = bytes,
+        //                    Mode = CipherMode.ECB,
+        //                    Padding = PaddingMode.PKCS7
+        //                };
+        //                byte[] inArray = provider2.CreateEncryptor().TransformFinalBlock(buffer2, 0, buffer2.Length);
+        //                str = Convert.ToBase64String(inArray, 0, inArray.Length);
+        //                num = 2;
+        //                goto Label_0010;
+        //            }
+        //        case 2:
+        //            return str;
 
-                case 3:
-                    {
-                        int expressionStack_4D_0 = 1;
-                        if (expressionStack_4D_0 == 0)
-                        {
-                        }
-                        if (!flag)
-                        {
-                            num = 0;
-                        }
-                        else
-                        {
-                            bytes = Encoding.UTF8.GetBytes(key);
-                            num = 4;
-                        }
-                        goto Label_0010;
-                    }
-            }
-            goto Label_002B;
-        }
+        //        case 3:
+        //            {
+        //                int expressionStack_4D_0 = 1;
+        //                if (expressionStack_4D_0 == 0)
+        //                {
+        //                }
+        //                if (!flag)
+        //                {
+        //                    num = 0;
+        //                }
+        //                else
+        //                {
+        //                    bytes = Encoding.UTF8.GetBytes(key);
+        //                    num = 4;
+        //                }
+        //                goto Label_0010;
+        //            }
+        //    }
+        //    goto Label_002B;
+        //}
         #endregion       
     }
 }

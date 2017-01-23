@@ -71,9 +71,9 @@ namespace HMIS_121
 
         private void button1_Click(object sender, EventArgs e)
         {
-            txtKq.Text = Fee_Media.Encrypt(txtMh.Text, "29fa797a-d341-4755-af56-8bf5aa6c9e5d", true);
-            MessageBox.Show( Fee_Media.Encrypt(txtMh.Text, "29fa797a-d341-4755-af56-8bf5aa6c9e5d", true));  
-            //MessageBox.Show
+            //txtKq.Text = Fee_Media.Encrypt(txtMh.Text, "29fa797a-d341-4755-af56-8bf5aa6c9e5d", true);
+            //MessageBox.Show( Fee_Media.Encrypt(txtMh.Text, "29fa797a-d341-4755-af56-8bf5aa6c9e5d", true));  
+            ////MessageBox.Show
         }
     }
 }
