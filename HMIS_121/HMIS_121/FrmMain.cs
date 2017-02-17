@@ -28,14 +28,25 @@ namespace HMIS_121
                 txtMedia.Text.ToString();
                 long Media = long.Parse(txtMedia.Text);
                 string text = Fee_Media.Close_Media_Fee(Media);
-                //MessageBox.Show(text);
-                if (text =="OK")
+                string bhyt = Fee_Media.tonghop_chiphi_bhyt(Media);                
+                //MessageBox.Show(bhyt);
+                if (text =="OK" && bhyt == "OK")
                 {
                     DialogResult dialogResult = MessageBox.Show("Bạn đã đóng Bệnh án thành công", "Thông Báo", MessageBoxButtons.YesNo);
-                }
+                }                
+                else if (text == "OK" && bhyt != "OK")
+                    {
+                        Fee_Media.Open_Media_Fee(Media); 
+                    DialogResult dialogResult = MessageBox.Show("Bạn chưa đóng hồ sơ nợ viện phí", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                          
+                    }
+               //else if(text != "OK" && bhyt == "OK")
+               //     {
+               //         DialogResult dialogResult = MessageBox.Show(text, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               //     }
                 else
                 {
-                    DialogResult dialogResult = MessageBox.Show(text, "Lỗi", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show(text, "Lỗi",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
@@ -59,7 +70,7 @@ namespace HMIS_121
                 }
                 else
                 {
-                    DialogResult dialogResult = MessageBox.Show(text, "Thông Báo", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show(text, "Thông Báo",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
@@ -78,9 +89,9 @@ namespace HMIS_121
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            txtKq.Text = Fee_Media.Encrypt(txtMh.Text, "29fa797a-d341-4755-af56-8bf5aa6c9e5d", true);
-            MessageBox.Show( Fee_Media.Encrypt(txtMh.Text, "29fa797a-d341-4755-af56-8bf5aa6c9e5d", true));  
-            ////MessageBox.Show
+            //txtKq.Text = Fee_Media.Encrypt(txtMh.Text, "29fa797a-d341-4755-af56-8bf5aa6c9e5d", true);
+            //MessageBox.Show( Fee_Media.Encrypt(txtMh.Text, "29fa797a-d341-4755-af56-8bf5aa6c9e5d", true));  
+            //MessageBox.Show
         }
     }
 }

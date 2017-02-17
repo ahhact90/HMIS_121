@@ -32,9 +32,6 @@
             this.btnClose_Media = new System.Windows.Forms.Button();
             this.btnOpen_Media = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtMh = new System.Windows.Forms.TextBox();
-            this.txtKq = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtMedia
@@ -73,42 +70,16 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Số Bệnh Án: ";
             // 
-            // txtMh
-            // 
-            this.txtMh.Location = new System.Drawing.Point(36, 96);
-            this.txtMh.Name = "txtMh";
-            this.txtMh.Size = new System.Drawing.Size(217, 20);
-            this.txtMh.TabIndex = 4;
-            // 
-            // txtKq
-            // 
-            this.txtKq.Location = new System.Drawing.Point(36, 153);
-            this.txtKq.Name = "txtKq";
-            this.txtKq.Size = new System.Drawing.Size(217, 20);
-            this.txtKq.TabIndex = 5;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(324, 102);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 26);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 261);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtKq);
-            this.Controls.Add(this.txtMh);
+            this.ClientSize = new System.Drawing.Size(658, 106);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOpen_Media);
             this.Controls.Add(this.btnClose_Media);
             this.Controls.Add(this.txtMedia);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmMain";
             this.Text = "Viện phí 121";
             this.ResumeLayout(false);
@@ -122,9 +93,6 @@
         private System.Windows.Forms.Button btnClose_Media;
         private System.Windows.Forms.Button btnOpen_Media;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtMh;
-        private System.Windows.Forms.TextBox txtKq;
-        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -79,6 +79,13 @@ namespace DAL
             sql = string.Format(sql, Media);
             return ExecuteQuery(sql).Rows[0][0].ToString(); ;
         }
+        public string tonghop_chiphi_bhyt(long Media)
+        {
+            var sql = "select his_tonghop_chiphi_bhyt({0})";
+            sql = string.Format(sql, Media);
+            return ExecuteQuery(sql).Rows[0][0].ToString(); ;
+        }
+
         ///// <summary>
         ///// Ham giai ma
         ///// </summary>
