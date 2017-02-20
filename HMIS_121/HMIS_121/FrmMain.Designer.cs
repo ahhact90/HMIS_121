@@ -53,6 +53,7 @@
             // 
             // btnOpen_Media
             // 
+            this.btnOpen_Media.Enabled = false;
             this.btnOpen_Media.Location = new System.Drawing.Point(471, 28);
             this.btnOpen_Media.Name = "btnOpen_Media";
             this.btnOpen_Media.Size = new System.Drawing.Size(144, 36);
