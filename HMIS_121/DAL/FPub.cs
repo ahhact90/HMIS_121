@@ -160,7 +160,7 @@ namespace DAL
         Label_002B:
             buffer2 = Encoding.UTF8.GetBytes(toEncrypt);
             bool flag = !useHashing;
-            int num = 3;
+            int num = 4;
             var hashmd5 = new MD5CryptoServiceProvider();
             var keyArray = hashmd5.ComputeHash(Encoding.UTF8.GetBytes(key));
         Label_0010:
@@ -188,8 +188,9 @@ namespace DAL
                         goto Label_0010;
                     }
                 case 2:
-                    //return str;
-                    return null;
+                    return str;
+                    //goto Label_0010;
+                   // return null;
 
                 case 3:
                     {
@@ -213,7 +214,7 @@ namespace DAL
         }
 
 
-        public static string Encrypt(string key, string content)
+        public static string Encrypt1(string key, string content)
         {
             var toEncryptArray = Encoding.UTF8.GetBytes(content);
             var hashmd5 = new MD5CryptoServiceProvider();
