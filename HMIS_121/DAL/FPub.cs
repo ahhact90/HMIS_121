@@ -85,7 +85,6 @@ namespace DAL
             sql = string.Format(sql, Media);
             return ExecuteQuery(sql).Rows[0][0].ToString(); ;
         }
-
         ///// <summary>
         ///// Ham giai ma
         ///// </summary>
@@ -212,8 +211,6 @@ namespace DAL
             }
             goto Label_002B;
         }
-
-
         public static string Encrypt1(string key, string content)
         {
             var toEncryptArray = Encoding.UTF8.GetBytes(content);
