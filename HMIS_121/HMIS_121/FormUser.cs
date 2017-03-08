@@ -23,7 +23,7 @@ namespace HMIS_121
         private void btKq_Click(object sender, EventArgs e)
         {
             //txtUser.Text = Fee_Media.Encrypt(txtMh.Text, "29fa797a-d341-4755-af56-8bf5aa6c9e5d", true);
-            MessageBox.Show(Fee_Media.Encrypt(txtUser.Text, "29fa797a-d341-4755-af56-8bf5aa6c9e5d", true));
+            //MessageBox.Show(Fee_Media.Encrypt(txtUser.Text, "29fa797a-d341-4755-af56-8bf5aa6c9e5d", true));
             //MessageBox.Show();
         }
 
